@@ -29,6 +29,7 @@ int main(int argc, const char * argv[]) {
     }while(input != exit);
     
     cout << "The closet pairs are: ";
+    
     collection.closestPairs();
     
     return 0;
