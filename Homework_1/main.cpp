@@ -17,20 +17,25 @@ int main(int argc, const char * argv[]) {
     int input;
     int exit = 00;
     
-    cout << "Enter any number, enter 00 to stop entering numbers" << endl;
+    cout << "Enter 00 to quit." << endl;
     
     do
     {
-        cout << "Enter number: ";
+        cout << ">: ";
         cin >> input;
         
         collection.addToVector(input);
         
     }while(input != exit);
     
-    cout << "The closet pairs are: ";
+    //Removes 00 from exiting do while loop
+    collection.popLast();
     
-    collection.closestPairs();
+    collection.bruteForce();
+    cout << endl;
+    
+    collection.recursion();
+    cout << endl;
     
     return 0;
 }
